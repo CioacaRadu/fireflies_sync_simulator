@@ -1,12 +1,12 @@
-function [ FFstruct ] = init_global_sim()
+function [ FFstruct ] = init_global_sim(final_time, tstep, firefly_nr, cycle_period, coupling)
 
 %%--CONFIGURABLE PARAMETERS--
 
-FFstruct.tstep = 0.01;
-FFstruct.coupling = 0.05;
-FFstruct.final_time = 100;
-FFstruct.firefly_nr = 12; %Number of fireflies
-FFstruct.firefly_cycle_period = 2; %time for a full oscilation
+FFstruct.tstep = tstep;
+FFstruct.coupling = coupling;
+FFstruct.final_time = final_time;
+FFstruct.firefly_nr = firefly_nr; %Number of fireflies
+FFstruct.firefly_cycle_period = cycle_period; %time for a full oscilation
 %%--CONFIGURABLE PARAMETERS END--
 
 

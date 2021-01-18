@@ -1,9 +1,7 @@
-clear all
-close all
-clc
+function [ ] = ffsim( final_time, tstep, firefly_nr, cycle_period, coupling)
 
-addpath('PostProcessing','Output','MainFunctions');
-FFstruct = init_global_sim();
+addpath('PostProcessing','Output','MainFunctions','GUI');
+FFstruct = init_global_sim(final_time, tstep, firefly_nr, cycle_period, coupling);
 
 
 
@@ -43,3 +41,5 @@ cd ..
    
    
 postprocessing;
+
+end
