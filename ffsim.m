@@ -17,6 +17,12 @@ for itime = 2 : length(FFstruct.t)
     
    end
 
+   if firefly_check_convergence(FFstruct,itime)
+   
+       disp('CONVERGENCE DONE');
+       break;
+       
+   end
    
    wbtext = sprintf('Running simulation... (%d / 100)',round(itime/length(FFstruct.t)*100));
    waitbar(itime/length(FFstruct.t),f,wbtext);
